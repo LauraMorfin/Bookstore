@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-app.use(express.static(__dirname+ '/client'));
+app.use(express.static(__dirname+ '/views'));
 app.use(bodyParser.json());
 
 Genre = require('./models/genre');
@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost/bookstore');
 var db = mongoose.connection;
 
 app.get('/', function(req, res){
-  res.send('Pease use /api/books or /api/genres');
+  res.send('Please use /api/books or /api/genres');
 
 });
 
@@ -107,5 +107,5 @@ app.delete('api/books/:_id', function(req, res){
 
 
 
-app.listen(3000);
-console.log('running on port 3000...');
+app.listen(3001);
+console.log('running on port 3001...');
