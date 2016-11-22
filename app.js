@@ -18,8 +18,11 @@ Genre =require('./models/genre');
 Book =require('./models/book');
 
 // Connect to Mongoose
+var MLAB_URI = process.env.MLAB_URI;
+console.log(MLAB_URI);
+mongoose.connect(MLAB_URI);
 // mongoose.connect('mongodb://localhost/bookstore');
-// var db = mongoose.connection;
+var db = mongoose.connection;
 
 app.get('/', function(req, res){
 	res.send('Please use /api/books or /api/genres');
