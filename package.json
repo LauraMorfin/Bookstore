@@ -7,11 +7,13 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies":{
-    "express": "*",
+  "dependencies": {
     "body-parser": "*",
+    "dotenv": "^2.0.0",
+    "express": "*",
     "mongoose": "*"
   },
   "author": "Laura Morfin",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }
